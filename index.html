@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="index.js"></script>
-	</head>
-	<body>
-		<div class="container">
-        	<!-- to set the content margins dealing with responsive behaviours of the layout -->
-			<div class="col-lg-8 m-auto d-block">
-				<!-- places the document in col-8 out of 12 in bootstrap; m sets the margin; d-block a rectangular block which controls the display of elements -->
-				<form action="#">
-					<div class="form-group">
-						<!-- Applies the control specified within div-->
-						<label>Firstname</label>
-						<input type="text" name="first" id="firstname" pattern="[a-zA-Z]">
-							<span id="usernameId"></span>
-							<!-- to diplay a inline elements in document-->
-						</div>
-					</br>
-					<div class="form-group">
-						<label>LastName</label>
-						<input type="text" name="last" id="lastname">
-							<span id="lastnameId"></span>
-						</div>
-					</br>
-					<div class="form-group">
-						<label>Email </label>
-						<input type="email" name="email" id="email">
-							<span id="emailId"></span>
-						</div>
-					</br>
-					<div class="form-group">
-						<label>Contact</label>
-						<input type="text" name="contact" id="contact" maxlength="10">
-							<span id="contactId"></span>
-						</div>
-					</br>
-					<div class="form-group">
-						<label>UserName</label>
-						<input type="text" name="user" id="username">
-							<span id="UsernameId"></span>
-						</div>
-					</br>
-					<div class="form-group">
-						<label>password</label>
-						<input type="password" name="pwd" id="pwd" maxlength="8">
-							<span id="password"></span>
-						</div>
-					</br>
-        Submit 
-					<input type="button" value=" Submit " onclick="validation()">
-					</form>
-				</div>
-			</div>
-		</body>
-	</html>
+
+<head>
+    <script src="style.css"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>-->
+    <!--Adds css to bootstrap;; makes the document to the center -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- to set the content margins dealing with responsive behaviours of the layout -->
+        <div class="col-lg-8 m-auto d-block">
+            <!-- places the document in col-8 out of 12 in bootstrap; m sets the margin; d-block a rectangular block which controls the display of elements -->
+            <form action="#" class="bg-light">
+				<h1>Complete Form Vallidation in Javascript</h1></br>
+                <div class="form-group" >
+                    <!-- Applies the control specified within div-->
+                    <label>Firstname</label>                    
+                    <input type="text" name="first" id="firstname" autocomplete="off">
+                    <span id="firstnameId" class="text-danger font-weight-bold"></span>
+                    <!-- to diplay a inline elements in document-->
+                </div>
+                </br>
+                <div class="form-group">
+                    <label>LastName</label>                    
+                    <input type="text" name="last" id="lastname" autocomplete="off">
+                    <span id="lastnameId" class="text-danger font-weight-bold"></span>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label>Email </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  
+                    <input type="email" name="email" id="email" autocomplete="off">
+                    <span id="emailId" class="text-danger font-weight-bold"></span>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label>Contact</label>                    
+                    <input type="text" name="contact" id="contact" maxlength="10" autocomplete="off">
+                    <span id="contactId" class="text-danger font-weight-bold"></span>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label>UserName</label>                    
+                    <input type="text" name="user" id="username" autocomplete="off">
+                    <span id="UsernameId" class="text-danger font-weight-bold"></span>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label>Password</label>                    
+                    <input type="password" name="pwd" id="pwd" maxlength="8" autocomplete="off">
+                    <span id="password" class="text-danger font-weight-bold"></span>
+                </div>
+                </br> 
+				Submit &nbsp;&nbsp;<input type="button" value=" Submit " onclick="validation()">
+                <!-- Button = onclick;;;; Submit= onsubmit -->
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

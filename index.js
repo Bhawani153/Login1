@@ -10,33 +10,44 @@ function validation(){
  var pwd = document.getElementById("pwd").value;
 
  console.log("Before if------------111111111");
- if(first == ""){
-     console.log("1111111111111111111111111");
-     document.getElementById("usernameId").innerHTML ="Please Enter the Username Details***";
+ // checks if firstname is empty
+ if(first == ""||(!isNaN(first)){
+     document.getElementById("firstnameId").innerHTML ="Please Enter the firstname Details in Correct Format***";
      return false;
  }
+  // Checks whether the length is between 3 or 15
+if ((first.length <= 2)||(first.length>=15)){
+     document.getElementById("firstnameId").innerHTML ="Entered First name length should be between 2 or 15***";
+     return false;
+ }
+ // checks if firstname is Not a number
  if(last ==""){
-    console.log("2222222222222222222222");
-    document.getElementById("lastnameId").innerHTML ="Please Enter the Username Details***";
+    document.getElementById("lastnameId").innerHTML ="Please Enter the Lastname Details***";
     return false;
 }
-if(email ==""){
-    console.log("3333333333333333333");
-    document.getElementById("emailId").innerHTML ="Please Enter the Username Details***";
+if((email =="")||(email.indexOf("@")<=0)){
+    document.getElementById("emailId").innerHTML ="Please Enter the email***";
     return false;
 }
-if(contact ==""){
-    console.log("44444444444444444");
-    document.getElementById("contactId").innerHTML ="Please Enter the Username Details***";
+if(email.CharAt(email.length-4)!=".")&&(email.CharAt(email.length-3)!="."){
+    document.getElementById("emailId").innerHTML ="Enter Email Id as abc@gmail.com***";
+    return false;
+}
+// checks if contact number entered is number
+if((contact =="")||isNaN(contact)){
+    document.getElementById("contactId").innerHTML ="Please Enter the Contact details***";
+    return false;
+}
+// Checks for the contact Length
+if (contact.length!=10){
+    document.getElementById("contactId").innerHTML="Enter the Correct Contact details";
     return false;
 }
 if(user ==""){
-    console.log("5555555555555");
     document.getElementById("UsernameId").innerHTML ="Please Enter the Username Details***";
     return false;
 }
 if(pwd ==""){
-    console.log("666666666666666666666");
     document.getElementById("password").innerHTML ="Please Enter the password***";
     return false;
 }
